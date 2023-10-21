@@ -21,6 +21,18 @@
             font-size: 13px;
             font-weight: bolder;
         }
+        .btlayout{
+            font-size: 15px;
+            background-color: black;
+            border-radius: 8px;
+            color: white;
+            float: right;
+        }
+        /* .btlayout:hover{
+            background-color: white;
+            color: black;
+            cursor: pointer;
+        } */
     </style>
 </head>
 <body style="font-size: 20px;">
@@ -33,10 +45,34 @@
         <div>
             <button onclick="calcular();">Média</button>
             <button onclick="limpar();">Limpar</button>
+            <button onclick="aterarLayout();" class="btlayout">Modo Dark</button>
         </div>
         <h3 class="result">Resultado:</h3>
     </div>
     <script>
+        let modo = 0;
+        function aterarLayout(){
+            const minhaDiv = 
+            document.getElementsByTagName("div")[0].style;
+            const meuBotao = document.getElementsByTagName("button")[2].style;
+            if(modo==0){
+                minhaDiv.backgroundColor = "black";
+                minhaDiv.color = "white";
+                meuBotao.backgroundColor = "white";
+                meuBotao.color = "black";
+                document.getElementsByTagName("button")[2].innerHTML = "Modo Light";
+                modo=1;
+            }else{
+                minhaDiv.padding = "10px";
+                minhaDiv.border = "2px solid blueviolet";
+                minhaDiv.backgroundColor= "rgb(48, 195, 195)";
+                meuBotao.backgroundColor = "black";
+                meuBotao.color = "white";
+                document.getElementsByTagName("button")[2].innerHTML = "Modo Dark";
+                modo=0;
+            }
+
+        }
         function calcular(){
             const nota1 = parseFloat(document.getElementById("nota1").value);
             const nota2 = parseFloat(document.getElementById("nota2").value);
