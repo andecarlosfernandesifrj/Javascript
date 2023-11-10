@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 12</title>
+</head>
+<body style="font-size: 26px;">
+    <h2>Exemplo 12</h2>
+    <p>Alterar o texto do input</p>
+    <label for="caixa">Nome:</label>
+    <input id="caixa" type="text" placeholder="Digite seu nome" onchange="atualizarTexto();">
+    <label for="email">Email:</label>
+    <input id="email" type="text" placeholder="Digite seu e-mail" onchange="atualizarEmail();">
+    <input type="button" value="Limpar" onclick="limpar();">
+    <script>
+        function atualizarTexto(){
+            const texto = document.getElementById("caixa");
+            texto.value = texto.value.toUpperCase(); 
+        }
+        function atualizarEmail(){
+            const email = document.getElementById("email");
+            email.value = email.value.toLowerCase(); 
+        }
+        function limpar(){
+            document.getElementById("caixa").value = "";
+            document.getElementById("email").value = "";
+        }
+    </script>
+</body>
+</html>
