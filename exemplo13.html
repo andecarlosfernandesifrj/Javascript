@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 13</title>
+</head>
+<body style="font-size: 26px;">
+    <h2>Exemplo 13 <br> Mouse over/out</h2>
+
+    <div onmouseover="campeao(this);" onmouseout="campeao2(this);" style="background-color: rgb(186, 35, 35);width: 300px;height: 200px;color: green;font-size: 100px;padding-top: 60px;padding-left: 20px;border: 3px solid green">
+        Fluzão
+    </div>
+    <script>
+        function campeao(obj){
+            obj.innerHTML = "Campeão da Libertadores de 2023";
+            obj.style.fontSize = "60px";
+            obj.style.paddingTop = "60px";
+        }
+        function campeao2(obj){
+            obj.innerHTML = "Fluzão";
+            obj.style.fontSize = "100px";
+            obj.style.paddingTop = "60px";
+        }
+    </script>
+</body>
+</html>
