@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 14</title>
+</head>
+<body style="font-size: 26px;">
+    <h2>Exemplo 14</h2>
+    <label for="caixa">Adicionar botão</label>
+    <input onclick="adicionar();" id="caixa" type="checkbox"><br>
+    <button style="font-size: 20px;display: none;">Clique</button>
+    <script>
+        function adicionar(){
+            const marcado = document.getElementById("caixa").checked;
+            console.log(marcado);
+            if(marcado)
+                document.getElementsByTagName("button")[0].style.display = "inline";
+            else
+                document.getElementsByTagName("button")[0].style.display = "none";
+        }
+    </script>
+</body>
+</html>
