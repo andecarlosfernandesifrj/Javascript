@@ -14,10 +14,23 @@
         function adicionar(){
             const marcado = document.getElementById("caixa").checked;
             console.log(marcado);
+            const botao = document.getElementsByTagName("button")[0];
+            botao.addEventListener("click",function(){
+                const divi = document.createElement("div");
+                const imagem = document.createElement("img"); 
+                imagem.src = "girafa.jpg";
+                divi.appendChild(imagem);
+                document.body.appendChild(divi);
+                const im = document.getElementsByTagName("img")[0];
+            im.addEventListener("click", function() {
+                divi.removeChild(im); 
+            });
+            });
+            
             if(marcado)
-                document.getElementsByTagName("button")[0].style.display = "inline";
+                botao.style.display = "inline";
             else
-                document.getElementsByTagName("button")[0].style.display = "none";
+                botao.style.display = "none";
         }
     </script>
 </body>
